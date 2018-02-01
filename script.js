@@ -34,7 +34,6 @@ function randomBackground() {
 }
 
 function setGradient(){
-//	Cambiar el estilo de background por el valor de color1 + el que haya en color2:
 	body.style.background = 
 	"linear-gradient(to right," 
 	+ color1.value 
@@ -42,12 +41,10 @@ function setGradient(){
 	+ color2.value 
 	+ ")";
 
-	//	Muestra los valores por pantalla
 	css.textContent = body.style.background + ";"
 }
 
 
-//	Cuando cambie el valor de color1 
 color1.addEventListener("input", setGradient);
 
 color2.addEventListener("input", setGradient);
