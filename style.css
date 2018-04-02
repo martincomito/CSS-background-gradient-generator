@@ -1,30 +1,27 @@
-
-body{
-	font-family: 'Bitter', serif;
-	color: rgba(0,0,0,0.5);
-	text-align: center;
-	text-transform: uppercase;
-	background: linear-gradient(to right, rgb(255,255,0) , rgb(0,0,255));
+body {
+	font: 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    top: 15%;
+	background: linear-gradient(to right, red , yellow); /* Standard syntax */
 }
 
 h1 {
-	font-size: 3em;
-	width: 100%;
-	transition: transform 0.5s;
+    font: 600 3.5em 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    width: 100%;
 }
 
-.color1, .color2{
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-}
+h3 {
+	font: 900 1em 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: none;
+    letter-spacing: 0.01em;
 
-button {
-	font-family: 'Bitter', serif;
-	transition: transform 0.5s;
-
-}
-
-button:hover{
-	transform: scale(1.5);
 }
