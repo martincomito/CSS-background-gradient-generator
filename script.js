@@ -1,52 +1,38 @@
-
-var css = document.querySelector("h3");
-var color1 = document.querySelector(".color1");
-var color2 = document.querySelector(".color2");
-var body = document.getElementById("gradient");
-var randomButton = document.getElementById("random");
-
-
-function generateColor() {
-    var pos1 = Math.floor((Math.random() * 256));
-    var pos2 = Math.floor((Math.random() * 256));
-    var pos3 = Math.floor((Math.random() * 256));
-
-	var rgbColor = pos1 + "," + pos2 + "," + pos3; 
-
-    return  rgbColor;
-
-}
+const css = document.querySelector("h3");
+const color1 = document.querySelector(".color1");
+const color2 = document.querySelector(".color2");
+const body = document.getElementById("gradient");
+const rcolor = document.getElementById("random");
 
 
-function randomBackground() {
-	
-	body.style.background = 
-	"linear-gradient(to right, rgb(" 
-	+ generateColor()
-	+ "), rgb(" 
-	+ generateColor() 
-	+ "))";
+const setGradient = () => {
+	body.style.background = `linear-gradient(to right, 
+	${color1.value}, ${color2.value})`;
 
-	css.textContent = body.style.background + ";"
+	css.textContent = `${body.style.background}`;
+};
 
-	
+const generateColor = () => {
+	const pos1 = Math.floor((Math.random() * 256));
+	const pos2 = Math.floor((Math.random() * 256));
+	const pos3 = Math.floor((Math.random() * 256));
+	const rgbColor = `${pos1, pos2, pos3}`; 
 
-}
+// ---Converting RGB into HEX to update color value attribute with hex code---
+	hexcolor = "#" + ((1 << 24) + (pos1 << 16) + (pos2 << 8) + pos3).toString(16).slice(1);
+};
 
-function setGradient(){
-	body.style.background = 
-	"linear-gradient(to right," 
-	+ color1.value 
-	+ ", " 
-	+ color2.value 
-	+ ")";
-
-	css.textContent = body.style.background + ";"
-}
-
+// This will update "color1" value attribute--
+const colorPick1 = () => { generateColor(); color1.value = hexcolor; };
+// This will update "color2" value attribute--
+const colorPick2 = () => { generateColor(); color2.value = hexcolor; };
 
 color1.addEventListener("input", setGradient);
-
 color2.addEventListener("input", setGradient);
 
-randomButton.addEventListener("click", randomBackground);
+// ---First update both the colors value attribute and then apply those colors---
+rcolor.addEventListener("click", function() {
+	colorPick1();
+	colorPick2();
+	setGradient();
+});
