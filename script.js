@@ -26,6 +26,8 @@ const generateColor = () => {
 color1.defaultValue = '#C00000';
 color2.defaultValue = '#F7B32D'; 
 
+// Animates the gradient code
+const animateText = () => {css.classList.add('animate')};
 
 // This will update "color1" value attribute--
 const colorPick1 = () => { generateColor(); color1.value = hexcolor; };
@@ -40,4 +42,6 @@ rcolor.addEventListener("click", function() {
 	colorPick1();
 	colorPick2();
 	setGradient();
+	animateText();
+
 });
