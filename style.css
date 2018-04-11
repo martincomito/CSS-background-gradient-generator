@@ -5,11 +5,12 @@ body {
     text-transform: uppercase;
     letter-spacing: .5em;
     top: 15%;
-	background: linear-gradient(to right, red , yellow); /* Standard syntax */
+	background: linear-gradient(to right, rgb(192,0,0) , rgb(247,179,45)); /* Standard syntax */
 }
 
 h1 {
-    font: 600 3.5em 'Raleway', sans-serif;
+
+    font: 600 3.5em 'Do Hyeon', sans-serif;
     color: rgba(0,0,0,.5);
     text-align: center;
     text-transform: uppercase;
@@ -17,11 +18,53 @@ h1 {
     width: 100%;
 }
 
+h2 {
+    font: 600 1.5em 'Do Hyeon', sans-serif;
+}
+
 h3 {
-	font: 900 1em 'Raleway', sans-serif;
+    font: 300 1.5em 'Do Hyeon', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: none;
+    letter-spacing: 0.01em;
+}
+
+.current-background {
+
+	font: 300 1.5em 'Raleway', sans-serif;
     color: rgba(0,0,0,.5);
     text-align: center;
     text-transform: none;
     letter-spacing: 0.01em;
 
+}
+
+
+
+input[type="color"] {
+    -webkit-appearance: none;
+    border: 3px solid white;
+    border-radius: 100%;
+    width: 38px;
+    height: 38px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+
+}
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 100%;
+}
+
+button {
+    border: 3px solid white;
+    font: 100 1em 'Raleway', sans-serif;
+    background-color: white;
+    transition: 0.3s;
+}
+
+button:hover{
+    transform: scale(1.3);
 }

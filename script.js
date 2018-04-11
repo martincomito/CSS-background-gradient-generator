@@ -1,4 +1,4 @@
-const css = document.querySelector("h3");
+const css = document.querySelector(".current-background");
 const color1 = document.querySelector(".color1");
 const color2 = document.querySelector(".color2");
 const body = document.getElementById("gradient");
@@ -21,6 +21,11 @@ const generateColor = () => {
 // ---Converting RGB into HEX to update color value attribute with hex code---
 	hexcolor = "#" + ((1 << 24) + (pos1 << 16) + (pos2 << 8) + pos3).toString(16).slice(1);
 };
+
+// Setting initial inputs color
+color1.defaultValue = '#C00000';
+color2.defaultValue = '#F7B32D'; 
+
 
 // This will update "color1" value attribute--
 const colorPick1 = () => { generateColor(); color1.value = hexcolor; };
